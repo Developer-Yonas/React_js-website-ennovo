@@ -1,0 +1,194 @@
+.services{
+    padding: 80px 0 0;
+}
+
+.services .servicesTitleDiv{
+    width: 80%;
+    margin: 0 auto;
+    padding-block: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.services .servicesTitleDiv h1{
+    font-size: 4rem;
+    width: 40%;
+}
+
+.services .servicesTitleDiv p{
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    width: 60%;
+}
+
+.services .container{
+    display: flex;
+}
+
+.services .container .left{
+    width: 50%;
+    /* background-image: linear-gradient(to right bottom,#fe6800, #e31d77); */
+    background-image: linear-gradient(to right bottom,#ff004c, #91002b);
+    color: white;
+    padding: 80px 40px;
+    position: sticky;
+    top: 80px;
+    height: 100vh;
+}
+
+.services .container .left h2{
+    font-size: 2.7rem;
+    line-height: 3rem;
+    margin-bottom: 50px;
+}
+
+.services .servicesNav span{
+    cursor: pointer;
+    display: block;
+    width: fit-content;
+    margin-block: 20px;
+    font-size: 1.7rem;
+    font-weight: bold;
+    transition: .5s;
+}
+
+.serviceBlackNav{
+    color: black;
+}
+
+.services .servicesNav span:hover{
+    color: black;
+}
+
+.services .container .right{
+    width: 50%;
+}
+
+.services .container .service{
+    padding: 100px 100px;
+}
+
+.services .container .service:nth-child(odd){
+    background-color: rgb(233, 233, 233);
+}
+
+.services .container .service h2,
+.services .container .service p{
+    max-width: 450px;
+    margin: 0 auto;
+    color: rgb(26, 26, 26);
+}
+
+.services .container .service .aboutUsSectionTitile{
+    line-height: 1.7rem;
+    margin-block: 10px;
+}
+
+.services .container .service img{
+    max-height: 400px;
+    object-fit: contain;
+    animation: servicesAnim1 1s ease-in-out infinite alternate;
+    width: 100%;
+}
+
+@keyframes servicesAnim1 {
+    0%{transform: translateY(5px);}
+    100%{transform: translateY(0);}
+}
+
+.services .container .service .imgsWithAnim {
+    position: relative;
+}
+
+.services .container .service .imgsWithAnim img{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.services .container .service .imgsWithAnim img:nth-child(4),
+.services .container .service .imgsWithAnim img:nth-child(5){
+    animation-duration: 3s;
+}
+
+.services .container .service .imgsWithAnim img:nth-child(2),
+.services .container .service .imgsWithAnim img:nth-child(3){
+    animation-duration: 2.5s;
+}
+
+.services .container .service .imgsWithAnim img:nth-child(1){
+    animation-duration: 1.5s;
+    position:static;
+}
+
+.services .container .service a{
+    text-decoration: none;
+    color: #d81c55;
+    border: solid #d81c55 1px;
+    padding: 10px 20px;
+    transition: .5s;
+    border-radius: 50px;
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    font-weight: bold;
+}
+
+.services .container .service a:hover{
+    background-color: #d81c55;
+    color: white;
+}
+
+@media screen and (max-width: 1000px) {
+    .services .container .left{
+        width: 40%;
+    }
+    .services .container .right{
+        width: 60%;
+    }
+
+    .services .container .left h2{
+        font-size: 2.2rem;
+        line-height: 2.5rem;
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .services .servicesTitleDiv{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .services .servicesTitleDiv{
+        display: block;
+        padding-block: 20px;
+    }
+
+    .services .servicesTitleDiv h1,
+    .services .servicesTitleDiv p{
+        width: 100%;
+    }
+
+    .services .servicesTitleDiv h1{
+        font-size: 3rem;
+    }
+
+    .services .container .left{
+        display: none;
+    }
+    .services .container .right{
+        width: 100%;
+    }
+
+    .services .container .service{
+        padding: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .services .container .service{
+        padding-inline: 10px;
+    }
+}

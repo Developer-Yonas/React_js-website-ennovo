@@ -1,0 +1,163 @@
+.aboutUs{
+    padding: 100px 0 0;
+    overflow: hidden;
+}
+
+.aboutUs .aboutUsTitleDiv{
+    width: 80%;
+    margin: 0 auto;
+    padding-block: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px rgb(211, 211, 211) solid;
+}
+
+.aboutUs .aboutUsTitleDiv h1{
+    font-size: 3.5rem;
+    width: 40%;
+}
+
+.aboutUs .aboutUsTitleDiv p{
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    width: 60%;
+}
+
+.aboutUs .aboutUsSectionTitile{
+    font-size: 2rem;
+    line-height: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.aboutUs .aboutUsSection{
+    margin: 0 auto;
+    padding-block: 50px;
+    transition: 1s;
+    min-height: 300px; /* for the scrolling animation*/
+}
+
+.aboutUs .aboutUsSection:nth-child(odd){
+    background-color: rgb(245, 245, 245);
+}
+
+.aboutUs .aboutUsSection .container{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aboutUs .aboutUsSection .imageSide{
+    transition: 1s;
+    width: 38%;
+}
+.aboutUs .aboutUsSection .textSide{
+    transition: 1s;
+    width: 60%;
+}
+
+.hiddenAboutLeft{
+    opacity: 0;
+    transform: translateX(-8rem);
+}
+
+.hiddenAboutRight{
+    opacity: 0;
+    transform: translateX(8rem);
+}
+
+.aboutUs .aboutUsSection img{
+    /* max-height: 200px; */
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.aboutUs .aboutUsSection .miniTitle{
+    color: #d81c55;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.aboutUs .aboutUsCallToAction{
+    padding-block: 100px;
+    color: white;
+    background-color: black;
+    font-size: 1.5rem;
+}
+
+.aboutUs .aboutUsCallToAction p,
+.aboutUs .aboutUsCallToAction h1{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 2rem;
+}
+
+.aboutUs .aboutUsCallToAction p{
+    font-size: 2rem;
+    color: #d81c55;
+}
+
+.aboutUs .aboutUsCallToAction .fa-arrow-right-long{
+    padding-inline: 10px;
+    color: white;
+}
+@media screen and (max-width: 900px) {
+    .aboutUs .aboutUsCallToAction{
+        font-size: 1.2rem;
+        width: 98%;
+    }
+    .aboutUs .aboutUsCallToAction p{
+        font-size: 1.4rem;
+        width: 98%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .aboutUs .aboutUsTitleDiv{
+        flex-direction: column;
+        gap: 20px;
+        padding-block: 20px;
+    }
+
+    .aboutUs .aboutUsTitleDiv h1,
+    .aboutUs .aboutUsTitleDiv p{
+        width: 100%;
+        font-size: .9rem;
+        line-height: 1.1rem;
+    }
+
+    .aboutUs .aboutUsTitleDiv h1{
+        font-size: 3rem;
+    }
+
+    .aboutUs .aboutUsSection img{
+        /* height: 500px; */
+    }
+
+    .aboutUs .aboutUsSection .container{
+        flex-direction: column;
+    }
+    .aboutUs .textFirstSection .container{
+        flex-direction: column-reverse;
+    }
+    .aboutUs .aboutUsSection .imageSide,
+    .aboutUs .aboutUsSection .textSide{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .aboutUs .aboutUsSectionTitile{
+        font-size: 2rem;
+        line-height: 2.2rem;
+    }
+    
+    .aboutUs .aboutUsSection .container{
+        width: 90%;
+    }
+}

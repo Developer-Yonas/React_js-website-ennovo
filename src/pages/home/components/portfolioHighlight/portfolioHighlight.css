@@ -1,0 +1,128 @@
+.portfolioHighlight{
+    margin: 50px auto;
+    transition: 1s;
+}
+
+.portfolioHighlightTitle{
+    width: 90%;
+    margin: 0 auto;
+    font-size: 3rem;
+    text-align: center;
+    line-height: 3rem;
+}
+
+.slider{
+    position: relative;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.slideTrack{
+    display: flex;
+    gap: 10px;
+    width: calc(400px * 12);
+    animation: scroll 25s linear infinite;
+}
+
+.slideTrack:hover{
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0%{
+        transform: translateX(0)
+    }
+    100%{
+        transform: translateX(calc(-400px * 6))
+    }
+}
+
+.slide{
+    height: 400px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position:top;
+    transition: 5s;
+}
+
+.slide img:hover{
+    object-position:bottom;
+    /* transform: scale(1.3); */
+    /* box-shadow: -1px -16px 317px 200px rgba(0,0,0,0.67); */
+    z-index: 2;
+}
+ 
+.seePortfolioBtn{
+    text-decoration: none;
+    color: #d81c55;
+    border: 2px #d81c55 solid;
+    font-weight: bold;
+    letter-spacing: .5px;
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 12px 25px;
+    border-radius: 40pc;
+    transition: all .5s;
+}
+
+.seePortfolioBtn:hover{
+    color: white;
+    background-color:#d81c55;
+}
+
+@media screen and (max-width: 768px){
+    .portfolioHighlight{
+        margin-top: 0;
+    }
+
+    .portfolioHighlightTitle{
+        font-size: large;
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+    .slider{
+        margin: 20px auto;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .portfolioHighlightTitle{
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+
+    .slider{
+        margin: 10px auto;
+    }
+
+    .slideTrack{
+        width: calc(300px * 12);
+    }
+
+    @keyframes scroll {
+        0%{
+            transform: translateX(0)
+        }
+        100%{
+            transform: translateX(calc(-300px * 6))
+        }
+    }
+
+    .slide{
+        height: 300px;
+        width: 300px;
+    }
+}
+

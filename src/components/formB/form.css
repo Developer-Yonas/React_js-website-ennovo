@@ -1,0 +1,362 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 29% ;
+    height: 100%;
+    z-index: 1; 
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    
+  }
+  .form-container .butt{
+    padding-top: 60px;
+}
+  
+  .form-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transform: translateX(0%);
+    transition: transform 0.3s ease;
+    box-shadow: 3px 4px #D81C55;
+  }
+  
+  .show-form .form-container {
+    
+    z-index: 1; 
+    transform: translateX(0);
+    
+  }
+  
+  .container:target + .backdrop {
+    display: block;
+  }
+
+
+
+
+
+.max .top{
+margin-top: 0px;
+font-weight: bold;
+ text-align: center;
+ padding-left: 20px;
+ font-size: 1.5rem;
+ color: black;
+}
+
+.max .section6{
+    padding: 0px 0;
+    transition: 1s;
+}
+
+
+
+.max .section6 .container{
+    width: 95%;
+    margin: 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.max .s6Left{
+    width: 0%;
+    font-size: 1rem;
+    color: #D81C55;
+}
+
+.max .s6Center{
+    width: 65%;
+    color: rgb(99, 99, 99);
+    font-size: 13px;
+}
+
+.max .s6Center label{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.max .s6Center input{
+    font-size: 0.7rem;
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto 10px;
+    padding: 10px 5px;
+    outline: none;
+    border: none;
+    background-color: rgb(238, 238, 238);
+    border-radius: 30px;
+}
+.max .s6Center input[type='checkbox']{
+    width: fit-content;
+    margin-right: 10px;
+}
+
+.max .s6Center input:focus{
+    outline: 1px solid #D81C55;
+}
+
+.max .s6Center input[type='checkbox']:focus{
+    outline: none;
+}
+
+.max .toBeRemovedBtn{
+    text-decoration: none;
+    cursor: pointer;
+    background-color: white;
+    color: #D81C55;
+    border: 3px #D81C55 solid;
+    outline: none;
+    letter-spacing: .5px;
+    display: inline-block;
+    margin: 30px;
+    padding: 4px;
+    border-radius: 40px;
+    transition: all .5s;
+    font-size: 0.75rem;
+}
+
+.max .toBeRemovedBtn:hover{
+    color: white;
+    background-color:#D81C55;
+}
+
+.max .s6Right{
+    width: 25%;
+    align-self: center;
+    padding-left: 0px;
+    font-size: 12px;
+}
+
+.max .s6RightLinks a{
+    display: flex;
+    width: fit-content;
+    text-decoration: none;
+    border: 3px black solid;
+    color: black;
+    margin-block: 10px;
+    letter-spacing: .5px;
+    padding: 12px 25px;
+    border-radius: 60px;
+    transition: all .2s;
+    
+}
+
+.max .s6RightLinks a:hover{
+    background-color: black;
+    color: white;
+}
+
+.max .s6Right .social{
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+}
+
+.max .s6Right .social a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 100px;
+    height: 25px;
+    border-radius:  60%;
+    background-color: black;
+    color: white;
+    transition: all .2s;
+    font-size: 15px;
+}
+
+.max .s6Right .social a:hover{
+    background-color: rgb(48, 48, 48);
+}
+
+@media screen and (max-width: 900px){
+    
+    .form-container {
+        width: 100%;
+        background-color: #fff;
+    } 
+    .form-container .butt{
+        padding-top: 60px;
+    }
+    .backdrop  {
+        position: fixed;
+        width: 100% ;
+        z-index: 1; 
+        height: 100%;
+        transition: background-color 0.3s ease;
+        display: none;
+      }
+
+      .show-form {
+        display: block;
+    }
+  
+    .max .top{
+        margin-top: 0px;
+        font-weight: bold;
+         font-size: 1.7rem;
+         color: black;
+        }
+    
+    .max .section6{
+        padding: 0px 0;
+    }
+
+    .max .section6 .container{
+        width: 90%;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .max   .s6Left,
+    .max   .s6Center,
+    .max .s6Right{
+        width: 100%;
+        display: block;
+        font-size: 1rem;
+    }
+
+    .max .s6Title{
+        font-size: 3rem;
+        width: 90%;
+    }
+    
+    .max .toBeRemovedBtn{
+        margin: 10px;
+        font-size: 1rem;
+    }
+    
+    .max  .s6RightLinks{
+        display: block;
+    }
+
+    .max   .s6Right .social{
+        display: flex;
+        margin: 0 auto;
+        padding-left: 170px;
+        padding-right: 30px;
+        
+    }
+    .max   .s6Right .social a{
+      border-radius: 40%;
+    }
+}
+
+
+@media screen and (max-width: 375px){
+
+    .form-container {
+        width: 100%;
+        background-color: #fff;
+    } 
+    .form-container .butt{
+        padding-top: 60px;
+    }
+    .backdrop  {
+        position: fixed;
+        width: 100% ;
+        z-index: 1; 
+        height: 100%;
+        transition: background-color 0.3s ease;
+        display: none;
+      }
+
+      .show-form {
+        display: block;
+    }
+  
+    .max .top{
+        margin-top: 0px;
+        font-weight: bold;
+         font-size: 1.1rem;
+         color: black;
+        }
+    
+    .max .section6{
+        padding: 0px 0;
+    }
+
+    .max .section6 .container{
+        width: 90%;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .max   .s6Left,
+    .max   .s6Center,
+    .max .s6Right{
+        width: 100%;
+        display: block;
+        font-size: 0.5rem;
+    }
+
+    .max .s6Title{
+        font-size: 3rem;
+        width: 90%;
+    }
+    
+    .max .toBeRemovedBtn{
+        margin: 10px;
+        font-size: 0.6rem;
+    }
+    
+    .max  .s6RightLinks{
+        display: block;
+    }
+
+    .max   .s6Right .social{
+        display: flex;
+        margin: 0 auto;
+        padding-left: 170px;
+        padding-right: 30px;
+        
+    }
+    .max   .s6Right .social a{
+      border-radius: 40%;
+    }
+
+}
+
+
+
+
+
+
+@media screen and (max-width: 768px){
+    .max   .s6Title{
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+
+    .max   .s6Left{
+        font-size: 1.2rem;
+        line-height: 2rem;
+        margin-block: 20px;
+    }
+}
+
+@media screen and (max-width: 350px){
+    .max   .toBeRemovedBtn{
+        padding: 10px 4px;
+    }
+}
+
+.max .tobeRemovedForm{
+    color: #D81C55;
+    opacity: 0;
+}
+
+@keyframes tobeRemovedAnim {
+    0%{opacity: 0;}
+    2%{opacity: 1;}
+    99%{opacity: 1;}
+}

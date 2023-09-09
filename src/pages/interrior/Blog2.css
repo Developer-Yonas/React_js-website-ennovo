@@ -1,0 +1,138 @@
+.Blog2{
+    padding: 100px 0 0;
+    overflow: hidden;
+}
+
+.Blog2 .detail{
+    text-align: justify;
+    margin: 0 auto;  
+    padding-top: 40px;
+    padding-left: 340px;
+}
+
+.Blog2 .content-left{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-top: 30px;
+    
+}
+
+.Blog2 .content-left .container-right{
+    flex: 3;
+    right: 0px;
+    width: 300px;
+    border-bottom: 1px rgb(211, 211, 211) solid;
+    padding-left: 80px;
+    padding: 60px;
+    background-color: whitesmoke;
+   }
+.Blog2 .content-left .container-right h3{
+    font-size: 2.5rem;
+}
+.Blog2 .content-left  img{
+    width: 670px;
+    height: 600px;
+    border: 0px solid #d81c55;
+    cursor: pointer;
+    
+}   
+
+.Blog2 .form-container .butt{
+    padding-left: 87%;
+    font-size: 3rem;
+    text-align: end;
+    padding-bottom: 0px;
+    
+}
+
+.Blog2 .form-container .butt button{
+    font-size: 1.4rem;
+    width: 100%;
+    color: #d81c55;
+    border-radius: 10px;
+    cursor: pointer;
+   
+}
+.Blog2 .form-container .butt button:hover{
+    background: #d81c55;
+    color: white;
+}
+
+
+
+.Blog2 .content-leftt .iimg{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-row-gap: 100px;
+    padding-left: 120px;
+    gap: 30px;
+    cursor: pointer;
+}
+.Blog2 .content-leftt .iimg img{
+       width: 350px;
+       height: 300px;
+ }
+ .Blog2 .content-leftt .iimg img:hover{
+    transition: .2s;
+    transform: scale(.98);
+
+}
+ .Blog2 .content-leftt h3{
+        font-weight: bold;
+        font-size: 1.3rem;
+ } 
+ .Blog2 .content-leftt .bot h3{
+    color:#d81c55 ;
+    
+  }
+
+.Blog2 .content-leftt .iimg li{
+    list-style-type: none;
+  }
+
+.Blog2 h2{
+    padding-left: 540px;
+}  
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .Blog2 .detail {
+    width: 100%;
+    padding-left: 0px;
+    
+  }
+  
+  .Blog2 .content-left  img{ 
+  width: 100%;
+  height: 350px;
+}
+.Blog2 .content-left .container-right h3{
+    padding-left: 0px;
+    width: 120%;
+    
+}
+
+
+.Blog2 .content-leftt .iimg {
+    display: block;
+    padding-left: 0px;
+   
+  }
+  .Blog2 .content-leftt .iimg img{
+    width: 100%;
+  }
+  .Blog2 .content-leftt .iimg h3{
+    padding-left: 20px;
+  }
+}   
+.Blog2 .content-left {
+    display:flex;
+    flex-wrap:wrap; /* this */
+    gap:10px;
+   
+  }

@@ -1,0 +1,210 @@
+.front{
+    padding: 80px 0 20px;
+    height: 100vh;
+}
+
+.front .front_container{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    animation: heroAnim 1s;
+}
+
+.front .left{
+    width: 60%;
+}
+
+.front .left h1{
+    white-space: nowrap;
+    font-size: 2.8rem;
+    font-weight: bolder;
+    line-height: 3.3rem;
+}
+
+@keyframes heroAnim {
+    from{
+        opacity: 0;
+        transform: translateY(8rem);}
+    to{
+        opacity: 1;
+        transform: translateY(0);}
+}
+
+.front .left .frontFocus{
+    background-image: linear-gradient(to bottom,#ff0051, #d91b57);
+    transform: skew(-20deg, 0deg);
+    display: inline-block;
+    color: white;
+    padding-inline: 10px;
+}
+
+.front .left .frontFocus span{
+    transform: skew(20deg, 0);
+    display: inline-block;
+}
+
+.front .left a{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(217,27,87);
+    letter-spacing: .5px;
+    display: inline-block;
+    margin: 40px 20px 0;
+    padding: 12px 35px;
+    transition: .3s;
+    border-radius: 40px;
+}
+
+.front .left a:hover{
+    background-color: rgb(255, 0, 81);
+}
+
+.front .right{
+    width: 40%;
+}
+
+.front .right img{
+    width: 100%;
+    object-fit: cover;
+    max-height: 50vh;
+    animation: HeroImgAnim 1s ease-in-out .3s infinite alternate;
+}
+
+@keyframes HeroImgAnim {
+    0%{transform: rotate(1deg);}
+    100%{transform: rotate(-1deg);}
+}
+
+.front .goDown{
+    position: absolute;
+    display: block;
+    color: black;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px;
+    border-radius: 20px;
+    border: solid rgb(170, 170, 170) 2px;
+    cursor: pointer;
+}
+
+.front .goDown .fa-arrow-down-long{
+    animation: front_upDown 1s ease-in-out infinite forwards;
+    position: relative;
+}
+
+@keyframes front_upDown {
+    0%{top: -5px;}
+    100%{top: 5px;}
+}
+
+@media screen and (max-width: 1450px){
+    .front .left h1{
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+}
+
+@media screen and (max-width: 1250px){
+    .front .left h1{
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 1070px){
+    .front .left h1{
+        font-size: 1.7rem;
+        line-height: 2rem;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .front .front_container{
+        padding-top: 50px;
+        flex-direction: column-reverse;
+        gap: 20px;
+        justify-content: start;
+        width: 95%;
+    }
+
+    .front .right img{
+        max-height: 200px;
+    }
+
+    .front .left,
+    .front .right{
+        width: 100%;        
+    }
+
+    .front .left h1{
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    .front .left a{
+        margin: 30px 20px;
+    }
+
+    .front .right img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .front .goDown{
+        display: none;
+    }
+}
+@media screen and (max-width: 768px){
+    .front .front_container{
+        gap: 40px;
+    }
+    
+    .front img{
+        width: 90%;
+    }
+    
+    .front .left h1{
+        font-size: 2rem;
+        line-height: 2.2rem;
+    }
+
+    .front .left a{
+        /* padding: 8px 25px; */
+        margin: 30px 10px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .front{
+    /* border: solid blue; */
+        height: calc(100vh - 90px);
+        padding-bottom: 0px;
+    }
+
+    .front .front_container{
+        gap: 60px;
+    }
+    .front .left h1{
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .front .left h1{
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 335px){
+    .front .left h1{
+        font-size: 1.1rem;
+        line-height: 1.3rem;
+    }
+}

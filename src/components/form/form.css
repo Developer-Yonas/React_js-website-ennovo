@@ -1,0 +1,191 @@
+.section6{
+    padding: 40px 0;
+    transition: 1s;
+}
+
+.s6Title{
+    font-size: 3.5rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.section6 .container{
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.s6Left{
+    width: 32%;
+    font-size: 1.5rem;
+    color: #D81C55;
+}
+
+.s6Center{
+    width: 39%;
+    color: rgb(99, 99, 99);
+}
+
+.s6Center label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.s6Center input{
+    font-size: 1.1rem;
+    display: inline-block;
+    width: 90%;
+    margin: 0 auto 10px;
+    padding: 10px 15px;
+    outline: none;
+    border: none;
+    background-color: rgb(238, 238, 238);
+    border-radius: 30px;
+}
+.s6Center input[type='checkbox']{
+    width: fit-content;
+    margin-right: 10px;
+}
+
+.s6Center input:focus{
+    outline: 1px solid #D81C55;
+}
+
+.s6Center input[type='checkbox']:focus{
+    outline: none;
+}
+
+.toBeRemovedBtn{
+    text-decoration: none;
+    cursor: pointer;
+    background-color: white;
+    color: #D81C55;
+    border: 3px #D81C55 solid;
+    outline: none;
+    letter-spacing: .5px;
+    display: inline-block;
+    margin: 40px;
+    padding: 10px;
+    border-radius: 40px;
+    transition: all .5s;
+}
+
+.toBeRemovedBtn:hover{
+    color: white;
+    background-color:#D81C55;
+}
+
+.s6Right{
+    width: 25%;
+    align-self: center;
+}
+
+.s6RightLinks a{
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+    border: 3px black solid;
+    color: black;
+    margin-block: 10px;
+    letter-spacing: .5px;
+    padding: 12px 25px;
+    border-radius: 40px;
+    transition: all .2s;
+}
+
+.s6RightLinks a:hover{
+    background-color: black;
+    color: white;
+}
+
+.s6Right .social{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.s6Right .social a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    transition: all .2s;
+}
+
+.s6Right .social a:hover{
+    background-color: rgb(48, 48, 48);
+}
+
+@media screen and (max-width: 900px){
+    .section6{
+        padding: 30px 0;
+    }
+
+    .section6 .container{
+        width: 90%;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .s6Left,
+    .s6Center,
+    .s6Right{
+        width: 100%;
+    }
+
+    .s6Title{
+        font-size: 3rem;
+        width: 90%;
+    }
+    
+    .toBeRemovedBtn{
+        margin: 10px;
+    }
+    
+    .s6RightLinks{
+        display: none;
+    }
+
+    .s6Right .social{
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width: 768px){
+    .s6Title{
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+
+    .s6Left{
+        font-size: 1.2rem;
+        line-height: 2rem;
+        margin-block: 20px;
+    }
+}
+
+@media screen and (max-width: 350px){
+    .toBeRemovedBtn{
+        padding: 10px 4px;
+    }
+}
+
+.tobeRemovedForm{
+    color: #D81C55;
+    opacity: 0;
+}
+
+@keyframes tobeRemovedAnim {
+    0%{opacity: 0;}
+    2%{opacity: 1;}
+    99%{opacity: 1;}
+}

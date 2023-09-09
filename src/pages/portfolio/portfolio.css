@@ -1,0 +1,302 @@
+.portfolio{
+    padding: 80px 0 20px;
+}
+
+.portfolio .container{
+    width: 80%;
+    margin: 0 auto;
+    padding-block: 20px;
+}
+
+.portfolio .portfolioTitleDiv{
+    padding-block: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.portfolio .portfolioTitleDiv h1{
+    font-size: 4rem;
+    width: 30%;
+}
+
+.portfolio .portfolioTitleDiv p{
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+    width: 50%;
+}
+
+.portfolio .filterProject{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    font-size: 1.3rem;
+    margin-top: 60px;
+}
+
+.portfolio .filterProject span{
+    cursor: pointer;
+    font-weight: 300;
+    text-decoration: underline;
+}
+
+.portfolio .filterProject span:hover{
+    text-decoration: none;
+}
+.portfolio .filterProject .active{
+    font-weight: 600;
+    text-decoration: none;
+    transition: .1s;
+}
+
+.portfolio .projects{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.portfolio .projects .hiddenDiv{
+    display: none;
+}
+
+.portfolio .projectTextDetail{
+    font-size: 1.3rem;
+    padding-top: 10px;
+    transition: .5s;
+}
+
+.portfolio .project{
+    width: 45%;
+    max-width: 500px;
+    margin-block: 50px;
+}
+
+.portfolio .project img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.portfolio .gallary .fa-chevron-right,
+.portfolio .gallary .fa-chevron-left,
+.portfolio .gallary .CloseProjectIcon{
+    display: none;
+}
+
+.portfolio .project .projectImg1{
+    cursor: pointer;
+}
+
+.portfolio .project .hiddenImage{
+    display: none;
+}
+
+.portfolio .loadMore{
+    cursor: pointer;
+    width: fit-content;
+    margin: 0 auto 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.portfolio .loadMore:hover .loadMoreIcon{
+    transform: translateY(-3px);
+    color: #a3103c;
+}
+
+.portfolio .loadMoreIcon{
+    font-size: 3.5rem;
+    color: #d81c55;
+    transition: .1s;
+}
+
+.portfolio .loadMore p{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.portfolio .loadMore img{
+    width: 95px;
+}
+
+.portfolio .openGallary{
+    background-color: white;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    /* background-color: rgba(255, 255, 255, 0.9); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: portfolioAnim4 1s ;
+}
+
+@keyframes portfolioAnim4 {
+    from{transform: scale(0); }
+    to{transform: scale(1);}
+}
+
+.portfolio .openGallary .fa-chevron-right,
+.portfolio .openGallary .fa-chevron-left,
+.portfolio .openGallary .CloseProjectIcon{
+    width: fit-content;
+    font-size: 3rem;
+    color: rgb(90, 89, 89);
+    position: absolute;
+    right: 5vw;
+    top: 50%;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.portfolio .openGallary .CloseProjectIcon{
+    font-size: 4rem;
+    top: 100px;
+}
+
+.portfolio .openGallary .fa-chevron-left{
+    left: 3vw;
+}
+
+.portfolio .openGallary .fa-chevron-right{
+    right: 3vw;
+}
+
+.portfolio .openGallary a{
+    left: 0;
+}
+
+.portfolio .openGallary .CloseProjectIcon:hover{
+    scale: .9;
+}
+
+.portfolio .openGallary .co{
+    width: 60vw;
+    height: 80vh;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    overflow: hidden;
+    margin-top: 70px;
+}
+
+.portfolio .openGallary .scrollParent{
+    /* width: 100%;
+    height: 100%; */
+    display: flex;
+    justify-content: space-between;
+    transition: all .5s;
+    /* flex-wrap: wrap; */
+}
+
+
+.portfolio .openGallary .hiddenImage,
+.openGallary img{
+    display: block;
+    width: 60vw;
+    min-width: 60vw;
+    height: 80vh;
+    object-fit: cover;
+}
+
+.portfolio .gallary{
+    transition: .5s;
+}
+
+.portfolio .gallary img:hover{
+    transition: .2s;
+    transform: scale(.98);
+}
+
+
+
+@media screen and (max-width: 900px) {
+    .portfolio .container{
+        width: 90%;
+    }
+    .project img{
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .portfolio .project{
+        width: 100%;
+        max-width: 100%;
+    }
+    .portfolio .filterProject{
+        gap: 40px;
+        font-size: 1.2rem;
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .portfolio .portfolioTitleDiv{
+        display: block;
+        padding-block: 20px;
+    }
+
+    .portfolio .portfolioTitleDiv h1,
+    .portfolio .portfolioTitleDiv p{
+        width: 100%;
+    }
+
+    .portfolio .portfolioTitleDiv h1{
+        font-size: 3rem;
+    }
+
+    .portfolio .project img{
+        height: 400px;
+    }
+
+    .portfolio .filterProject{
+        gap: 20px;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .portfolio .filterProject{
+        gap: 0px;
+        flex-wrap: wrap;
+    }
+    .portfolio .filterProject span{
+        width: 50%;
+        margin-block: 2px;
+    }
+    .portfolio .project{
+        margin-block: 25px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .portfolio{
+        padding-bottom: 0;
+    }
+    
+    .portfolio .portfolioTitleDiv{
+        padding-block: 0;
+    }
+
+    .portfolio .portfolioTitleDiv p{
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+    }
+
+    .projects{
+        padding-block: 20px 0;
+    }
+
+    .project{
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .project img{
+        height: 300px;
+    }   
+}
